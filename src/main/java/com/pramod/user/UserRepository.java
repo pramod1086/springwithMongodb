@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 public interface UserRepository {
 	
     User save(User persisted);
+    User insert(User persisted);
+
 
 
 

@@ -8,8 +8,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
 	@Id
 	private int userID;
-	private User(int userID, String firstName, String lastName) {
-		super();
+	public User(int userID, String firstName, String lastName) {
+
 		this.userID = userID;
 		this.firstName = firstName;
 		this.lastName = lastName;

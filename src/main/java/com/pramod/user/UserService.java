@@ -14,16 +14,17 @@ public class UserService {
 	@Autowired
 	private MongoTemplate myMongoTemplate;
 
-     @Autowired
-	private MongoOperations myMongoOperations;
-
-
-   public User save(User usr){
+   public User insert(User usr){
 
 	   myMongoTemplate.insert(usr);
 	   return usr;
   }
 
+	public User save(User usr){
+
+		myMongoTemplate.save(usr);
+		return usr;
+	}
     public User getUserById(int id){
 
 		return myMongoTemplate.findById(id, com.pramod.user.User.class);
